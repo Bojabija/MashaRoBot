@@ -50,7 +50,7 @@ def generate_time(to_find: str, findtype: List[str]) -> str:
             f"💠<b>Hari:</b> <code>{current_day}</code>\n"
             f"⏲️<b>Waktu Saat Ini:</b> <code>{current_time}</code>\n"
             f"🗓️<b>Tanggal Hari ini:</b> <code>{current_date}</code>\n"
-            '🌏<b>Zona Waktu:</b> <a href=" https://id.wikipedia.org/wiki/Daftar_zona_waktu ">Lihat Daftar</a>'
+            '🌏<b>Zona Waktu:</b> <a href="https://id.wikipedia.org/wiki/Daftar_zona_waktu">Lihat Daftar</a>'
         )
     except:
         result = None
@@ -92,8 +92,8 @@ def gettime(update: Update, context: CallbackContext):
 
 
 __help__ = """
- ❍ /time <query>*:* Gives information about a timezone.
-*Available queries:* Country Code/Country Name/Timezone Name
+ ❍ /time <intruksi>*:* menampilkan informasi waktu
+*Intruksi yang tersedia:* Kode Negara/Nama Kota/Nama Zona Waktu
  ❍ ⏰ [Timezones list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 💡 Ex:- /time IN *:* It will shows Indian current time and date..
 """
@@ -102,6 +102,6 @@ TIME_HANDLER = DisableAbleCommandHandler("time", gettime)
 
 dispatcher.add_handler(TIME_HANDLER)
 
-__mod_name__ = "TIME"
+__mod_name__ = "Waktu"
 __command_list__ = ["time"]
 __handlers__ = [TIME_HANDLER]
