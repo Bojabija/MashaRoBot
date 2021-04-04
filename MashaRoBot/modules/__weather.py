@@ -46,15 +46,15 @@ async def _(event):
         sun_rise_time = int(response_api["sys"]["sunrise"]) + country_time_zone
         sun_set_time = int(response_api["sys"]["sunset"]) + country_time_zone
         await event.reply(
-            """**Location**: {}
-**Temperature**: {}°С
-    __minimium__: {}°С
-    __maximum__ : {}°С
-**Humidity**: {}%
-**Wind**: {}m/s
-**Clouds**: {}hpa
-**Sunrise**: {} {}
-**Sunset**: {} {}""".format(
+            """🌏**Lokasi**: {}
+🌡️**Suhu**: {}°С
+    __minimal__: {}°С
+    __maximal__ : {}°С
+♻️**Kelembapan**: {}%
+🌬️**Angin**: {}m/s
+☁️**Awan**: {}hpa
+🌄**Terbit**: {} {}
+🌅**Terbenam**: {} {}""".format(
                 input_str,
                 response_api["main"]["temp"],
                 response_api["main"]["temp_min"],
@@ -90,11 +90,11 @@ async def _(event):
 
 
 __help__ = """
-I can find weather of all cities
+Bantuan untuk mencari prakiraan cuaca
 
- ❍ /weather <city>*:* Get weather info in a particular place.
- ❍ /wttr <city>*:* Advanced weather module, usage same as /weather
- ❍ /wttr moon*:* Get the current status of moon
+ ❍ /weather <kota>*:* menampilkan prakiraan cuaca
+ ❍ /wttr <kota>*:* modul lain untuk menampilkan cuaca
+ ❍ /wttr moon*:* memberikan prakiraan bulan
 """
 
-__mod_name__ = "WEATHER"
+__mod_name__ = "Cuaca"
