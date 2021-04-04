@@ -109,7 +109,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """
-Hai orang baik! Jika anda berkenan untuk berdonasi, silahkan hubungi staff grup [Kerabat Online](https://t.me/KerabatOnline).
+Hai orang baik! Jika anda berkenan untuk berdonasi, silahkan PM [Kerabat Bot](https://t.me/KerabatBot).
 
 Semua donasi yang masuk kesini akan digunakan untuk keperluan server bot ini atau untuk kepentingan grup kami.
 """
@@ -393,7 +393,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" *Halo orang baik!* _Anda ingin berdonasi?_
-                 \n_Silahkan hubungi staff grup_ [Kerabat Online](https://t.me/KerabatOnline).""",
+                 \n_Silahkan hubungi_ [Kerabat Bot](https://t.me/KerabatBot).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
