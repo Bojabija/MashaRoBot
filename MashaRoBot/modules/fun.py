@@ -63,7 +63,7 @@ def slap(update: Update, context: CallbackContext):
         else message.reply_text
     )
 
-    curr_user = "{}".format(mention_html(message.from_user.id, message.from_user.first_name))
+    curr_user = "[{}](tg://user?id={})".format(mention_html(message.from_user.id, message.from_user.first_name))
     user_id = extract_user(message, args)
 
     if user_id == bot.id:
@@ -91,10 +91,10 @@ def slap(update: Update, context: CallbackContext):
 
         slapped_user = bot.get_chat(user_id)
         user1 = curr_user
-        user2 = "{}".format(mention_html(slapped_user.id, slapped_user.first_name))
+        user2 = "[{}](tg://user?id={})".format(mention_html(slapped_user.id, slapped_user.first_name))
 
     else:
-        user1 = "{}".format(mention_html(context.bot.id, context.bot.first_name))
+        user1 = "[{}](tg://user?id={})".format(mention_html(context.bot.id, context.bot.first_name))
         user2 = curr_user
 
     temp = random.choice(fun_strings.SLAP_TEMPLATES)
