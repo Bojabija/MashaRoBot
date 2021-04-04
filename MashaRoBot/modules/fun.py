@@ -91,10 +91,10 @@ def slap(update: Update, context: CallbackContext):
 
         slapped_user = bot.get_chat(user_id)
         user1 = curr_user
-        user2 = html.escape(slapped_user.first_name)
+        user2 = "{}".format(mention_html)(slapped_user.id, slapped_user.first_name))
 
     else:
-        user1 = bot.first_name
+        user1 = "{}".format(mention_html)(context.bot.id, context.bot.first_name))
         user2 = curr_user
 
     temp = random.choice(fun_strings.SLAP_TEMPLATES)
