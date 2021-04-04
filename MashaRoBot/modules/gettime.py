@@ -68,7 +68,7 @@ def gettime(update: Update, context: CallbackContext):
         message.reply_text("Provide a country name/abbreviation/timezone to find.")
         return
     send_message = message.reply_text(
-        f"Finding timezone info for <b>{query}</b>", parse_mode=ParseMode.HTML
+        f"<i>Mencari informasi waktu untuk wilayah</i> <b>{query}</b>", parse_mode=ParseMode.HTML
     )
 
     query_timezone = query.lower()
@@ -79,8 +79,8 @@ def gettime(update: Update, context: CallbackContext):
 
     if not result:
         send_message.edit_text(
-            f"Timezone info not available for <b>{query}</b>\n"
-            '<b>All Timezones:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List here</a>',
+            f"<i>Informasi waktu untuk wilayah</i> <b>{query}</b> <i>tidak ditemukan</i>.\n"
+            '<b>Daftar Zona Waktu:</b> <a href="https://id.wikipedia.org/wiki/Daftar_zona_waktu">lihat disini</a>',
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
         )
@@ -94,8 +94,8 @@ def gettime(update: Update, context: CallbackContext):
 __help__ = """
  ❍ /time <intruksi>*:* menampilkan informasi waktu
 *Intruksi yang tersedia:* Kode Negara/Nama Kota/Nama Zona Waktu
- ❍ ⏰ [Timezones list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
-💡 Ex:- /time IN *:* It will shows Indian current time and date..
+ ❍ ⏰ [Daftar Zona Waktu](https://id.wikipedia.org/wiki/Daftar_zona_waktu)
+💡 Contoh:- /time Id *:* untuk melihat informasi waktu dan tanggal negara Indonesia..
 """
 
 TIME_HANDLER = DisableAbleCommandHandler("time", gettime)
