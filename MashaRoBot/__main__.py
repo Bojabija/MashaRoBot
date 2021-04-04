@@ -74,8 +74,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hellow My name is` *Masha*
-`I'm here to help you manage your groups! Hit` *📚Commands* `button below to find out more about how to use me to my full potential.` 
+_Halo kerabat! Nama saya_ *Canzu si Fakbot*
+
+[Pengguna ini](https://t.me/smrmdhn) adalah Boss saya.
+_Saya ditugaskan untuk membantu keperluan dan kepentingan grup_ [Kerabat Online](https://t.me/KerabatOnline).
 """
 
 buttons = [
@@ -85,7 +87,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 COMMANDS", callback_data="help_back"),
+        InlineKeyboardButton(text="📚 COMMNDS", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
@@ -98,10 +100,19 @@ buttons = [
 
 
 HELP_STRINGS = """
-*『HELP BUTTONS HERE』*"""
+*MODUL YANG TERSEDIA*
+
+• /start : _untuk memulai bot_
+• /help : _untuk menampilkan menu bantuan_
+• /donate : _menampilkan informasi cara berdonasi_
+"""
 
 
-DONATE_STRING = """No need.. I'm rich"""
+DONATE_STRING = """
+Hai orang baik! Jika anda berkenan untuk berdonasi, silahkan hubungi staff grup [Kerabat Online](https://t.me/KerabatOnline).
+
+Semua donasi yang masuk kesini akan digunakan untuk keperluan server bot ini atau untuk kepentingan grup kami.
+"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -186,7 +197,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="⬅️ BACK", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="🔙 Kembali", callback_data="help_back")]]
                     ),
                 )
 
@@ -211,7 +222,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "<b>Saya aktif!</b>\n<b>Tersedia sejak:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -290,7 +301,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "「 *HELP FOR* *{}* 」\n".format(
+                "_Bantuan untuk_ *{}*\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -300,7 +311,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="「 GO BACK 」", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="🔙 Kembali", callback_data="help_back")]]
                 ),
             )
 
@@ -346,7 +357,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *MASHA*, a powerful group management bot built to help you manage your group easily.
+            text=""" _Saya_ *Canzu*, _bot untuk membantu manajemen grup._
                  ❍ I can restrict users.
                  ❍ I can greet users with customizable welcome messages and even set a group's rules.
                  ❍ I have an advanced anti-flood system.
