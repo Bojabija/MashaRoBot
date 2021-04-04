@@ -358,21 +358,21 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     if query.data == "masha_":
         query.message.edit_text(
             text=""" _Saya_ *Canzu*, _bot untuk membantu manajemen grup._
-                 ❍ I can restrict users.
-                 ❍ I can greet users with customizable welcome messages and even set a group's rules.
-                 ❍ I have an advanced anti-flood system.
-                 ❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-                 ❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 ❍ I check for admins' permissions before executing any command and more stuffs
-                 \n_Masha's licensed under the GNU General Public License v3.0_
-                 Here is the [💾Repository](https://github.com/Mr-Dark-Prince/MashaRoBot).
-                 If you have any question about Masha, let us know at @WasteBots.""",
+                 ❍ Saya adalah Fakbot.
+                 ❍ Bisa menyapa anggota yang baru bergabung ke grup.
+                 ❍ Memiliki fitur anti-flood.
+                 ❍ Dapat memperingati anggota yang melanggar peraturan hingga memberi sanksi mute, kick, banned, dan lain-lain.
+                 ❍ Banyak fitur hiburan untuk menghilangkan gabut.
+                 ❍ Pasti menjadi admin yang baik hati dan tidak sombong
+                 \n*Canzu si Fakbot* adalah bot admin kesayangan para kerabat.
+                 
+                 Bersenang-senanglah bersama kami di grup @KerabatOnline.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="masha_back")
+                    InlineKeyboardButton(text="Kembali", callback_data="masha_back")
                  ]
                 ]
             ),
@@ -392,14 +392,14 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *MASHA*
-                 \nHere is the [Source Code](https://github.com/Mr-Dark-Prince/MashaRoBot) .""",
+            text=""" Halo... saya *Canzu*
+                 \nBot kesayangan [Boss Saya](https://t.me/smrmdhn).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="source_back")
+                    InlineKeyboardButton(text="Kembali", callback_data="source_back")
                  ]
                 ]
             ),
@@ -423,12 +423,12 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()}",
+                f"Hubungi saya di PM untuk melihat bantuan modul{module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help",
+                                text="Bantuan",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -444,7 +444,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
+                            text="Bantuan",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
@@ -465,7 +465,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="Kembali", callback_data="help_back")]]
             ),
         )
 
