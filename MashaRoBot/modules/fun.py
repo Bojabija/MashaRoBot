@@ -63,7 +63,7 @@ def slap(update: Update, context: CallbackContext):
         else message.reply_text
     )
 
-    curr_user = html.escape(message.from_user.first_name)
+    curr_user = "{}".format(mention_html)(message.from_user.id, message.from_user.first_name))
     user_id = extract_user(message, args)
 
     if user_id == bot.id:
