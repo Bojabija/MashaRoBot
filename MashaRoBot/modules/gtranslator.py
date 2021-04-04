@@ -26,7 +26,7 @@ def totranslate(update: Update, context: CallbackContext):
             try:
                 source_lang = args[1].split(None, 1)[0]
             except (IndexError, AttributeError):
-                source_lang = "en"
+                source_lang = "id"
 
         else:
             args = update.effective_message.text.split(None, 2)
@@ -65,13 +65,13 @@ def totranslate(update: Update, context: CallbackContext):
             detection = trl.detect(text)
             trans_str = trl.translate(text, lang_tgt=dest_lang)
             return message.reply_text(
-                f"Translated from `{detection[0]}` to `{dest_lang}`:\n`{trans_str}`",
+                f"*Diterjemahkan dari bahasa* `{detection[0]}` *ke bahasa*  `{dest_lang}`:\n\n`{trans_str}`",
                 parse_mode=ParseMode.MARKDOWN,
             )
         else:
             trans_str = trl.translate(text, lang_tgt=dest_lang, lang_src=source_lang)
             message.reply_text(
-                f"Translated from `{source_lang}` to `{dest_lang}`:\n`{trans_str}`",
+                f"*Diterjemahkan dari bahasa* `{source_lang}` *ke bahasa* `{dest_lang}`:\n\n`{trans_str}`",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
@@ -91,12 +91,12 @@ def totranslate(update: Update, context: CallbackContext):
 
 
 __help__ = """
- ❍ /tr or /tl (language code) as reply to a long message
-*Example:* 
- ❍ /tr en*:* translates something to english
- ❍ /tr hi-en*:* translates hindi to english
+ ❍ /tr atau /tl (kode bahasa)*:* untuk menerjemahkan teks
+*Contoh:* 
+ ❍ /tr id*:* menerjemahkan teks ke bahasa Indonesia
+ ❍ /tr en-id*:* menerjemahkan dari bahasa Inggris ke Indonesia
 
-*Language Codes*
+*Kode Bahasa*
 `af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,
 et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,
 id,ig,is,it,iw,ja,jw,ka,kk,km,kn,ko,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,
@@ -109,6 +109,6 @@ TRANSLATE_HANDLER = DisableAbleCommandHandler(["tr", "tl"], totranslate)
 
 dispatcher.add_handler(TRANSLATE_HANDLER)
 
-__mod_name__ = "G-TRANS"
+__mod_name__ = "Kamus"
 __command_list__ = ["tr", "tl"]
 __handlers__ = [TRANSLATE_HANDLER]
