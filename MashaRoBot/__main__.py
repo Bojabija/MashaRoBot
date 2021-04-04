@@ -76,24 +76,24 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 _Halo kerabat! Nama saya_ *Canzu si Fakbot*
 
-[Pengguna ini](https://t.me/smrmdhn) adalah Boss saya.
-_Saya ditugaskan untuk membantu keperluan dan kepentingan grup_ [Kerabat Online](https://t.me/KerabatOnline).
+_Bot tampan paling karismatik sedunia_.
+
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD MASHA TO YOUR GROUP ➕️", url="t.me/MashaRoBot?startgroup=true"),
+            text="👥Kerabat Online Grup👥", url="t.me/KerabatOnline"),
     ],
     [
-        InlineKeyboardButton(text="ℹ️ ABOUT", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 COMMNDS", callback_data="help_back"),
+        InlineKeyboardButton(text="ℹ️ Tentang Bot", callback_data="masha_"),
+        InlineKeyboardButton(text="📚 Bantuan", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="💾 SOURCE", callback_data="source_"),
+            text="💸Donasi", callback_data="source_"),
         InlineKeyboardButton(
-            text="👥 SUPPORT", url="https://t.me/wastebots"
+            text="👤Boss Saya", url="https://t.me/smrmdhn"
         ),
     ],
 ]
@@ -358,12 +358,12 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     if query.data == "masha_":
         query.message.edit_text(
             text=""" _Saya_ *Canzu*, _bot untuk membantu manajemen grup._
-                 ❍ Saya adalah Fakbot.
-                 ❍ Bisa menyapa anggota yang baru bergabung ke grup.
-                 ❍ Memiliki fitur anti-flood.
-                 ❍ Dapat memperingati anggota yang melanggar peraturan hingga memberi sanksi mute, kick, banned, dan lain-lain.
-                 ❍ Banyak fitur hiburan untuk menghilangkan gabut.
-                 ❍ Pasti menjadi admin yang baik hati dan tidak sombong
+            ❍ Saya adalah Fakbot.
+            ❍ Bisa menyapa anggota yang baru bergabung ke grup.
+            ❍ Memiliki fitur anti-flood.
+            ❍ Dapat memperingati anggota yang melanggar peraturan hingga memberi sanksi mute, kick, banned, dan lain-lain.
+            ❍ Banyak fitur hiburan untuk menghilangkan gabut.
+            ❍ Pasti menjadi admin yang baik hati dan tidak sombong
                  \n*Canzu si Fakbot* adalah bot admin kesayangan para kerabat.
                  
                  Bersenang-senanglah bersama kami di grup @KerabatOnline.""",
@@ -392,8 +392,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Halo... saya *Canzu*
-                 \nBot kesayangan [Boss Saya](https://t.me/smrmdhn).""",
+            text=""" *Halo orang baik!* _Anda ingin berdonasi?_
+                 \n_Silahkan hubungi staff grup_ [Kerabat Online](https://t.me/KerabatOnline).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -657,11 +657,11 @@ def donate(update: Update, context: CallbackContext):
             )
 
             update.effective_message.reply_text(
-                "I've PM'ed you about donating to my creator!"
+                "Saya mengirimi anda PM tentang cara berdonasi."
             )
         except Unauthorized:
             update.effective_message.reply_text(
-                "Contact me in PM first to get donation information."
+                "Silahkan hubungi salah satu staff grup ini jika anda ingin berdonasi!"
             )
 
 
@@ -688,7 +688,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Yes I'm alive 😹")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Punten😎")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
