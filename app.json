@@ -8,7 +8,7 @@
          "manager",
          "Masha"
       ],   
-   "repository": "https://github.com/Mr-Dark-Prince/MashaRoBot",
+   "repository": "https://github.com/Bojabija/MashaRoBot",
    "addons": [
       {
          "options": {
@@ -63,12 +63,12 @@
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "@KerabatOnline"
+         "value": "KerabatOnline"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
          "required": false,
-         "value": ""
+         "value": "Bojabija"
       },
       "IBM_WATSON_CRED_URL": {
          "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
@@ -173,7 +173,7 @@
       "DONATION_LINK": {
          "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to paul",
          "required": false,
-         "value": "https://www.paypal.me/PaulSonOfLars"
+         "value": "https://t.me/KerabatBot"
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
