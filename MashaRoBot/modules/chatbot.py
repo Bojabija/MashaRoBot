@@ -36,7 +36,7 @@ def add_chat(update: Update, context: CallbackContext):
     user = update.effective_user
     is_chat = sql.is_chat(chat.id)
     if chat.type == "private":
-        msg.reply_text("You can't enable AI in PM.")
+        msg.reply_text("Chatbot tidak berfungsi di PM.")
         return
 
     if not is_chat:
@@ -44,15 +44,15 @@ def add_chat(update: Update, context: CallbackContext):
         ses_id = str(ses.id)
         expires = str(ses.expires)
         sql.set_ses(chat.id, ses_id, expires)
-        msg.reply_text("AI successfully enabled for this chat!")
+        msg.reply_text("Chatbot sukses diaktifkan di Grup ini!")
         message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#AI_ENABLED\n"
+            f"#Chatbot_Aktif\n"
             f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         )
         return message
     else:
-        msg.reply_text("AI is already enabled for this chat!")
+        msg.reply_text("Chatbot dibolehkan!")
         return ""
 
 
@@ -69,10 +69,10 @@ def remove_chat(update: Update, context: CallbackContext):
         return ""
     else:
         sql.rem_chat(chat.id)
-        msg.reply_text("AI disabled successfully!")
+        msg.reply_text("Chatbot di-nonaktifkan!")
         message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#AI_DISABLED\n"
+            f"#Chatbot_Nonaktif\n"
             f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         )
         return message
@@ -147,8 +147,8 @@ Chatbot utilizes the CoffeeHouse API and allows Saitama to talk and provides a m
 *Admins only:*
  ❍ /addchat*:* Enables Chatbot mode in the chat.
  ❍ /rmchat*:* Disables Chatbot mode in the chat.
-Reports bugs at @{SUPPORT_CHAT}
-[Powered by CoffeeHouse](https://coffeehouse.intellivoid.net) from @Intellivoid
+Gabung ke grup kami @{SUPPORT_CHAT}
+[](https://coffeehouse.intellivoid.net) from @Intellivoid
 """
 
 ADD_CHAT_HANDLER = CommandHandler("addchat", add_chat)
@@ -168,7 +168,7 @@ dispatcher.add_handler(REMOVE_CHAT_HANDLER)
 dispatcher.add_handler(CHATBOT_HANDLER)
 dispatcher.add_handler(LIST_CB_CHATS_HANDLER)
 
-__mod_name__ = "CHATBOT"
+__mod_name__ = "Chatbot"
 __command_list__ = ["addchat", "rmchat", "listaichats"]
 __handlers__ = [
     ADD_CHAT_HANDLER,
