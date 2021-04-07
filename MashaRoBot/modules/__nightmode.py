@@ -83,7 +83,7 @@ async def profanity(event):
     input = event.pattern_match.group(2)
     if not event.sender_id == OWNER_ID:
         if not await is_register_admin(event.input_chat, event.sender_id):
-           await event.reply("Only admins can execute this command!")
+           await event.reply("Hanya admin yang bisa memberikan perintah ini!")
            return
         else:
           if not await can_change_info(message=dmod):
@@ -92,11 +92,11 @@ async def profanity(event):
     if not input:
         if is_nightmode_indb(str(event.chat_id)):
                 await event.reply(
-                    "Currently NightMode is Enabled for this Chat"
+                    "Mode malam diaktifkan untuk grup ini."
                 )
                 return
         await event.reply(
-            "Currently NightMode is Disabled for this Chat"
+            "Mode malam dinonaktifkan untuk grup ini."
         )
         return
     if "on" in input:
@@ -140,7 +140,7 @@ async def job_close():
             logger.info(f"Unable To Close Group {chat} - {e}")
 
 #Run everyday at 12am
-scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
+scheduler = AsyncIOScheduler(timezone="Asia/Jakarta")
 scheduler.add_job(job_close, trigger="cron", hour=23, minute=59)
 scheduler.start()
 
@@ -151,7 +151,7 @@ async def job_open():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "06:00 Am, Group Is Opening.\n**Powered By Masha**"
+              int(pro.chat_id), "06:00 Am, Group Is Opening.\n**Powered By Canzu**"
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
@@ -162,7 +162,7 @@ async def job_open():
             logger.info(f"Unable To Open Group {pro.chat_id} - {e}")
 
 # Run everyday at 06
-scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
+scheduler = AsyncIOScheduler(timezone="Asia/Jakarta")
 scheduler.add_job(job_open, trigger="cron", hour=5, minute=58)
 scheduler.start()
 
@@ -175,4 +175,4 @@ __help__ = """
 and Automatically openned at 6am(IST) To Prevent Night Spams.
 """
 
-__mod_name__ = "N MODE"
+__mod_name__ = "Mode Malam"
