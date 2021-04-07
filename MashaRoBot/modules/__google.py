@@ -249,13 +249,13 @@ async def apk(e):
         app_details = "<a href='" + app_icon + "'>📲&#8203;</a>"
         app_details += " <b>" + app_name + "</b>"
         app_details += (
-            "\n\n<code>Developer :</code> <a href='"
+            "\n\n<code>Pengembang :</code> <a href='"
             + app_dev_link
             + "'>"
             + app_dev
             + "</a>"
         )
-        app_details += "\n<code>Rating :</code> " + app_rating.replace(
+        app_details += "\n<code>Peringkat :</code> " + app_rating.replace(
             "Rated ", "⭐ "
         ).replace(" out of ", "/").replace(" stars", "", 1).replace(
             " stars", "⭐ "
@@ -263,11 +263,11 @@ async def apk(e):
             "five", "5"
         )
         app_details += (
-            "\n<code>Features :</code> <a href='"
+            "\n<code>Fitur :</code> <a href='"
             + app_link
-            + "'>View in Play Store</a>"
+            + "'>Lihat di PlayStore</a>"
         )
-        app_details += "\n\n===> Masha <==="
+        app_details += "\n\n===> Canzu <==="
         await e.reply(app_details, link_preview=True, parse_mode="HTML")
     except IndexError:
         await e.reply("No result found in search. Please enter **Valid app name**")
@@ -275,13 +275,13 @@ async def apk(e):
         await e.reply("Exception Occured:- " + str(err))
 
 
-__mod_name__ = "GOOGLE"
+__mod_name__ = "Google"
 
 __help__ = """
  ❍ /google <text>*:* Perform a google search
  ❍ /img <text>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
  ❍ /app <appname>*:* Searches for an app in Play Store and returns its details.
  ❍ /reverse: Does a reverse image search of the media which it was replied to.
- ❍ Masha <query>*:* Masha answers the query
-  💡Ex: `Masha where is India?`
+ ❍ Canzu <query>*:* Canzu answers the query
+  💡Ex: `Canzu do you love me?`
 """
