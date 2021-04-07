@@ -109,7 +109,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """
-Hai orang baik! Jika anda berkenan untuk berdonasi, silahkan PM [Kerabat Bot](https://t.me/KerabatBot).
+Hai orang baik! Jika anda berkenan untuk berdonasi, silahkan PM [Staff Kerabat](https://t.me/Kerabatku).
 
 Semua donasi yang masuk kesini akan digunakan untuk keperluan server bot ini atau untuk kepentingan grup kami.
 """
@@ -393,7 +393,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" *Halo orang baik!* _Anda ingin berdonasi?_
-                 \n_Silahkan hubungi_ [Kerabat Bot](https://t.me/KerabatBot).""",
+                 \n_Silahkan hubungi_ [Staff Kerabat](https://t.me/Kerabatku).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -642,8 +642,8 @@ def donate(update: Update, context: CallbackContext):
 
         if OWNER_ID != 254318997 and DONATION_LINK:
             update.effective_message.reply_text(
-                "You can also donate to the person currently running me "
-                "[here]({})".format(DONATION_LINK),
+                "Silahkan hubungi staff Kerabat Online Grup"
+                "[disini]({})".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN,
             )
 
