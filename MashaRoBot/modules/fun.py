@@ -154,7 +154,7 @@ def mesum(update: Update, context: CallbackContext):
 
 @run_async
 def roll(update: Update, context: CallbackContext):
-    update.message.reply_text(random.choice(🎲, 🎲))
+    update.message.reply_text(random.choice(range(1, 7)))
 
 
 @run_async
