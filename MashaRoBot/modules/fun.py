@@ -16,7 +16,7 @@ GIF_ID = "CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr
 
 
 @run_async
-def runs(update: Update, context: CallbackContext):
+def aksara(update: Update, context: CallbackContext):
     update.effective_message.reply_text(random.choice(fun_strings.RUN_STRINGS))
 
 
@@ -33,7 +33,7 @@ def sanitize(update: Update, context: CallbackContext):
         if message.reply_to_message
         else message.reply_animation
     )
-    reply_animation(GIF_ID, caption=f"*Sanitizes {name}*")
+    reply_animation(GIF_ID, caption=f"*Menyemprot wajah {name}*")
 
 
 @run_async
@@ -49,7 +49,7 @@ def sanitize(update: Update, context: CallbackContext):
         if message.reply_to_message
         else message.reply_animation
     )
-    reply_animation(random.choice(fun_strings.GIFS), caption=f"*Sanitizes {name}*")
+    reply_animation(random.choice(fun_strings.GIFS), caption=f"*Menyemprot wajah {name}*")
 
 
 @run_async
@@ -112,27 +112,27 @@ def slap(update: Update, context: CallbackContext):
 
 
 @run_async
-def pat(update: Update, context: CallbackContext):
+def mesum(update: Update, context: CallbackContext):
     bot = context.bot
     args = context.args
     message = update.effective_message
 
     reply_to = message.reply_to_message if message.reply_to_message else message
 
-    curr_user = html.escape(message.from_user.first_name)
+    curr_user = "{}".format(mention_html(message.from_user.id, message.from_user.first_name))
     user_id = extract_user(message, args)
 
     if user_id:
         patted_user = bot.get_chat(user_id)
         user1 = curr_user
-        user2 = html.escape(patted_user.first_name)
+        user2 = "{}".format(mention_html(patted_user.id, patted_user.first_name))
 
     else:
-        user1 = bot.first_name
+        user1 = "{}".format(mention_html(context.bot.id, context.bot.first_name))
         user2 = curr_user
 
     pat_type = random.choice(("Text", "Gif", "Sticker"))
-    if pat_type == "Gif":
+    if pat_type == "Gif:
         try:
             temp = random.choice(fun_strings.PAT_GIFS)
             reply_to.reply_animation(temp)
@@ -154,7 +154,7 @@ def pat(update: Update, context: CallbackContext):
 
 @run_async
 def roll(update: Update, context: CallbackContext):
-    update.message.reply_text(random.choice(range(1, 7)))
+    update.message.reply_text(random.choice(🎲, 🎲))
 
 
 @run_async
@@ -211,7 +211,7 @@ def rlg(update: Update, context: CallbackContext):
 
 
 @run_async
-def decide(update: Update, context: CallbackContext):
+def bacot(update: Update, context: CallbackContext):
     reply_text = (
         update.effective_message.reply_to_message.reply_text
         if update.effective_message.reply_to_message
@@ -221,7 +221,7 @@ def decide(update: Update, context: CallbackContext):
 
 
 @run_async
-def eightball(update: Update, context: CallbackContext):
+def hina(update: Update, context: CallbackContext):
     reply_text = (
         update.effective_message.reply_to_message.reply_text
         if update.effective_message.reply_to_message
@@ -231,7 +231,7 @@ def eightball(update: Update, context: CallbackContext):
 
 
 @run_async
-def table(update: Update, context: CallbackContext):
+def kabur(update: Update, context: CallbackContext):
     reply_text = (
         update.effective_message.reply_to_message.reply_text
         if update.effective_message.reply_to_message
@@ -326,34 +326,34 @@ def weebify(update: Update, context: CallbackContext):
 
 
 __help__ = """
- ❍ /runs*:* reply a random string from an array of replies
- ❍ /slap*:* slap a user, or get slapped if not a reply
- ❍ /shrug*:* get shrug XD
- ❍ /table*:* get flip/unflip :v
- ❍ /decide*:* Randomly answers yes/no/maybe
- ❍ /toss*:* Tosses A coin
- ❍ /bluetext*:* check urself :V
- ❍ /roll*:* Roll a dice
- ❍ /rlg*:* Join ears,nose,mouth and create an emo ;-;
- ❍ /shout <keyword>*:* write anything you want to give loud shout
- ❍ /weebify <text>*:* returns a weebified text
- ❍ /sanitize*:* always use this before /pat or any contact
- ❍ /pat*:* pats a user, or get patted
- ❍ /8ball*:* predicts using 8ball method 
+ ❍ /aksara*:* _memberikan kalimat puitis atau gombalan norak_ 
+ ❍ /slap*:* _menampol pengguna_
+ ❍ /shrug*:* ¯\_(ツ)_/¯
+ ❍ /kabur*:* _lari dari kenyataan_
+ ❍ /bacot*:* _hilih bicit_
+ ❍ /toss*:* _lempar koin_
+ ❍ /bluetext*:* _cek aja sendiri_
+ ❍ /roll*:* _lempar dadu_
+ ❍ /rlg*:* _mata, telinga, hidung, mulut_
+ ❍ /shout <kata kunci>*:* _tulis apapun untuk diteriakkan_
+ ❍ /weebify <teks>*:* _mengembalikan teks weebify_
+ ❍ /sanitize*:* _jangan lupa semprotkan hand sanitizer_
+ ❍ /mesum*:* *xixixixixi*
+ ❍ /hina*:* _memberikan penghinaan_
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
-RUNS_HANDLER = DisableAbleCommandHandler("runs", runs)
+RUNS_HANDLER = DisableAbleCommandHandler("aksara", aksara)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap)
-PAT_HANDLER = DisableAbleCommandHandler("pat", pat)
+PAT_HANDLER = DisableAbleCommandHandler("mesum", mesum)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug)
 BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext)
 RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
-DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
-EIGHTBALL_HANDLER = DisableAbleCommandHandler("8ball", eightball)
-TABLE_HANDLER = DisableAbleCommandHandler("table", table)
+DECIDE_HANDLER = DisableAbleCommandHandler("bacot", bacot)
+EIGHTBALL_HANDLER = DisableAbleCommandHandler("hina", hina)
+TABLE_HANDLER = DisableAbleCommandHandler("kabur", kabur)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 
