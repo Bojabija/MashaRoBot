@@ -26,8 +26,8 @@ GIFS = [
 ]
 
 SLAP_MASHA_TEMPLATES = (
-    "GAUSA SLAP SLAP GUE! MAU LU GUE MUTE?.",
-    "STOP SLAP GUE!",
+    "Hei {user1}, gausah slap slap gue! Lu mau gue mute?.",
+    "Stop slap gue {user1}!",
     [
         "Lu gue mute dulu yah, mampus!",  # normal reply
         "Beruntung lu admin disini, jadi gue gabisa mute lu.",  # reply to admin
