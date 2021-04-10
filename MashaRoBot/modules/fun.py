@@ -59,8 +59,8 @@ def slap(update: Update, context: CallbackContext):
     chat = update.effective_chat
 
     reply_text = (
-        message.reply_to_message.reply_text
-        if message.reply_to_message
+        message.reply_text
+        if message.reply_text
         else message.reply_text
     )
 
