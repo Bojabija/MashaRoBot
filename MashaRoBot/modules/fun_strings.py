@@ -26,14 +26,14 @@ GIFS = [
 ]
 
 SLAP_MASHA_TEMPLATES = (
-    "Slap me one more time and I'll mute you.",
-    "Stop slapping me. REEEEEEEEEEEEEE.",
+    "GAUSA SLAP SLAP GUE! MAU LU GUE MUTE?.",
+    "STOP SLAP GUE!",
     [
-        "I am muting you for a minute.",  # normal reply
-        "Stop slapping me just because I can't mute you. REEEEEEEEEE.",  # reply to admin
+        "Lu gue mute dulu yah, mampus!",  # normal reply
+        "Beruntung lu admin disini, jadi gue gabisa mute lu.",  # reply to admin
         "tmute",  # command
-        "Shut up!",
-        "Silence!",
+        "DIEM LU!",
+        "DIAAAAMMM!",
     ],
 )
 
