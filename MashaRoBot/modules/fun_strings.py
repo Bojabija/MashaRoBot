@@ -7,7 +7,7 @@ RUN_STRINGS = (
     "Kamu...\nSebening embun di pagi hari\nIndah seperti pelangi di sore hari\nSejuk bagai udara pedesaan di malam hari\nKamu... Satu meski bukan Tuhan.\n\n#aksara\n@RuangKerabat",
     "Enak yah jadi kamu, kalau mau lihat keindahan, tinggal bercermin.\n\n#aksara\n@RuangKerabat",
     "Kusembunyikan luka ku, agar tak ada yang melihatnya\nKunikmati sendiri rasa sakitnya\nPerih, harus kuakui\nTapi aku tak mau lagi seperti dulu\nKuperlihatkan luka ku pada orang lain\nKemudian dibuatnya semakin berdarah.\n\n#aksara\n@RuangKerabat",
-    "Ada yang hilang selepas kau pergi\nTak ada lagi tempat merindu.\nBanyak penyesalan selepas kau pergi\nTak ada lagi cahaya.\nKini aku tersesat\nDi ujung pertemuan kita.\nTanpa tujuan dan tanpa harapan.\n\n#aksara\@RuangKerabat",
+    "Ada yang hilang selepas kau pergi\nTak ada lagi tempat merindu.\nBanyak penyesalan selepas kau pergi\nTak ada lagi cahaya.\nKini aku tersesat\nDi ujung pertemuan kita.\nTanpa tujuan dan tanpa harapan.\n\n#aksara\n@RuangKerabat",
     "Tak perlu bingung memikirkannya, tapi…\nDiriku bukanlah diriku\nAku adalah aku, tapi…\nAku bukanlah aku\nAku adalah siapapun\nBisa saja aku adalah kamu, tapi…\nKamu bukanlah diriku\nDan diriku bukanlah aku, tapi…\nTak perlu bingung memikirkannya.\n\n#aksara\n@RuangKerabat",
     "Tak ada yang lebih menyenangkan dari rindu yang berujung temu.\n\n#aksara\n@RuangKerabat",
     "May the odds\nbe ever in your favour.",
