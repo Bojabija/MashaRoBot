@@ -89,6 +89,7 @@ def slap(update: Update, context: CallbackContext):
         return
 
             reply = temp.format(user1=user1, user2 = user2, item=item, hits=hit, throws=throw)
+    
     if user_id:
 
         slapped_user = bot.get_chat(user_id)
