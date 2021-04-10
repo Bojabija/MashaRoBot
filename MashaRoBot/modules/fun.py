@@ -69,6 +69,7 @@ def slap(update: Update, context: CallbackContext):
 
     if user_id == bot.id:
         temp = random.choice(fun_strings.SLAP_MASHA_TEMPLATES)
+        reply = temp.format{user1=user1, user2=user2, item=item, hits=hit, throws=throw)
 
         if isinstance(temp, list):
             if temp[2] == "tmute":
