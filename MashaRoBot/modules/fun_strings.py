@@ -38,28 +38,28 @@ SLAP_MASHA_TEMPLATES = (
 )
 
 SLAP_TEMPLATES = (
-    "{user2} was killed by magic.",
-    "{user2} starved without pats.",
-    "{user2} was knocked into the void by {user1}.",
-    "{user2} fainted.",
-    "{user2} is out of usable Pokemon! {user2} whited out!.",
-    "{user2} is out of usable Pokemon! {user2} blacked out!.",
-    "{user2} got rekt.",
-    "{user2}'s melon was split by {user1}.",
-    "{user2} was sliced and diced by {user1}.",
-    "{user2} played hot-potato with a grenade.",
-    "{user2} was knifed by {user1}.",
-    "{user2} ate a grenade.",
-    "{user2} is what's for dinner!",
-    "{user2} was terminated by {user1}.",
-    "{user1} spammed {user2}'s email.",
-    "{user1} RSA-encr",
-    "{user2} lost his race piece!",  # No game no life reference
-    "Shut up {user2}, you are just {user2}.",  # No game no life reference
-    "{user1} hits {user2} with Aka si anse!",  # No game no life reference
-    "@NeoTheKitty scratches {user2}",  # Pixels pet cat - @NeoTheKitty
-    "Majin buu ate {user2}",  # Dbz
-    "Goblin slayer slays {user2}",  # Goblin Slayer
+    "{user1} {hits} {user2} menggunakan {item}.",
+    "{user1} mengambil sebuah {item} kemudian {hits} {user2} dengan itu.",
+    "{user2} pingsan setelah kepalanya di hantam {item} oleh {user1}.",
+    "{user1} {throws} sebuah {item} ke wajah {user2}.",
+    "{user1} mendorong {user2} ke jurang penyesalan paling dalam.",
+    "{user1} mengikat {user2} ke tiang listrik kemudian melemparinya {item}.",
+    "{user1} memfitnah {user2} mencuri sebuah {item} di rumah Pak Lurah.",
+    "{user1} menggelitik {user2} sampai lemas kemudian {hits} kepalanya dengan {item}.",
+    "{user1} mengejar {user2} sambil berteriak *MALING, MALING, MALING*!",
+    "{user1} melempar granat aktif ke {user2}.",
+    "{user2} sekarat setelah terkena tendangan kungfu {user1}.",
+    "{user2} meminum kopi yang telah diberi sianida oleh{ user1}.",
+    "{user1} mengambil {item} lalu {throws} itu ke kepala {user2}.",
+    "{user2} terkapar karena terkena {item} yang dilempar {user1}.",
+    "{user1} menyebarkan aib {user2} ke sosial media.",
+    "{user2} diikat di kursi kemudian dipukul sebuah {item} oleh {user1}.",
+    "{user2} sekarat karena telah dikeroyok oleh warga.",  # No game no life reference
+    "Ingat {user2}, kau itu beban keluarga!",  # No game no life reference
+    "{user1} menggeplak {user2} dengan keras!",  # No game no life reference
+    "Semua netizen membully {user2}",  # Pixels pet cat - @NeoTheKitty
+    "{user2} jadi buronan Polisi karena ketahuan mencuri kancut Firaun.",  # Dbz
+    "{user1} menghajar {user2} dengan jurus karate.",  # Goblin Slayer
 )
 
 PAT_TEMPLATES = (
@@ -142,7 +142,7 @@ ITEMS = (
 )
 
 THROW = (
-    "menggeplakkan",
+    "menghantamkan",
     "menamparkan",
     "memukulkan",
     "melemparkan",
@@ -154,7 +154,7 @@ HIT = (
     "menampar",
     "menggeplak",
     "menghantam",
-    "menampar",
+    "menghajar",
 )
 
 EYES = [
