@@ -134,14 +134,14 @@ def mesum(update: Update, context: CallbackContext):
     pat_type = random.choice(("Text", "Gif", "Sticker"))
     if pat_type == "Gif":
         try:
-            temp = random.choice(fun_strings.PAT_GIFS)
+            temp = random.choice(fun_strings.PAT_TEMPLATES)
             reply_to.reply_animation(temp)
         except BadRequest:
             pat_type = "Text"
 
     if pat_type == "Sticker":
         try:
-            temp = random.choice(fun_strings.PAT_STICKERS)
+            temp = random.choice(fun_strings.PAT_TEMPLATES)
             reply_to.reply_sticker(temp)
         except BadRequest:
             pat_type = "Text"
