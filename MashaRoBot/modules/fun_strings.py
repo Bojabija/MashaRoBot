@@ -10,13 +10,13 @@ RUN_STRINGS = (
     "Ada yang hilang selepas kau pergi\nTak ada lagi tempat merindu.\nBanyak penyesalan selepas kau pergi\nTak ada lagi cahaya.\nKini aku tersesat\nDi ujung pertemuan kita.\nTanpa tujuan dan tanpa harapan.\n\n#aksara\n@RuangKerabat",
     "Tak perlu bingung memikirkannya, tapi…\nDiriku bukanlah diriku\nAku adalah aku, tapi…\nAku bukanlah aku\nAku adalah siapapun\nBisa saja aku adalah kamu, tapi…\nKamu bukanlah diriku\nDan diriku bukanlah aku, tapi…\nTak perlu bingung memikirkannya.\n\n#aksara\n@RuangKerabat",
     "Tak ada yang lebih menyenangkan dari rindu yang berujung temu.\n\n#aksara\n@RuangKerabat",
-    "May the odds\nbe ever in your favour.",
-    "Run everyone, they\njust dropped a bomb 💣💣",
-    "And they disappeared\nforever, never to be seen again.",
-    "Legend has\nit, they're still running.",
-    "Hasta la\nvista, baby.",
-    "Ah, what a\nwaste. I liked that one.",
-    "As The Doctor\nwould say... RUN!",
+    "Tidak selamanya jagad raya baik kepadamu\nKadang kala pasti bosan\nJuga tersakiti oleh angkuhmu\nMaka pahamilah, untuk segala kebencian\nKau dapatkan dari perilaku sendiri.\n\n#aksara\n@RuangKerabat",
+    "Banyak dosa yang mengikuti ketika kau lupa, ketika kau sibuk, ketika kau tidak peduli dengan pena malaikat di sebelah kirimu terus bergerak. Kau mencoba membuangnya ketika kau ingat, ketika kau memiliki waktu senggang, ketika kau begitu peduli dengan malaikat disebelah kananmu yang tak mencatat apapun kelakuanmu. Kemudian dosa itu kembali kepadamu, kau tuannya, kau pemiliknya, tanggung jawabmu.\n\n#aksara\n@RuangKerabat",
+    "Nikmati secuil kesenangan yang masih bisa kita dapatkan. Siapa yang bisa memastikan, bahwa ketika kita tidur besok malam, lusa pagi kita masih terbangun di pagi harinya. Siapa yang bisa memastikan?\n\n#aksara\n@RuangKerabat",
+    "Ini hanya aksara. Mati tapi bernyawa.\nIni hanya aksara. Dingin, tapi bisa menyelimuti dengan kehangatan tiada tanding.\nIni hanya aksara. Tumpul, tapi bisa menyakiti lebih dari goresan pedang tajam di tubuhmu.\nIni hanya aksara. Berkawanlah, maka semua baik-baik saja.\n\n#aksara\n@RuangKerabat",
+    "Kita diberi gerak tapi tak diberi ruang.\nKita punya rasa tapi tak punya masa.\nKita dekat tapi tersekat.\nKita hanya kita, dengan segala paradoks kita.\n\n#aksara\n@RuangKerabat",
+    "Tahukah pelangi yang biasa kuceritakan padamu? Ia malu menampakkan diri lagi setelah kuceritakan tentang keindahanmu.\n\n#aksara\n@RuangKerabat",
+    "Di antara kilau bintang malam hari, bayangmu hadir menjadi paling bersinar. Datang menagih rindu yang belum tuntas. Aku tersenyum, barangkali kau ada dibelakangku bersiap memelukku.\n\n#aksara\@RuangKerabat",
 )
 
 GIFS = [
