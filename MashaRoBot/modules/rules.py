@@ -50,8 +50,8 @@ def send_rules(update, chat_id, from_pm=False):
     elif from_pm:
         bot.send_message(
             user.id,
-            "The group admins haven't set any rules for this chat yet. "
-            "This probably doesn't mean it's lawless though...!",
+            "Silahkan ketik /peraturan "
+            "Untuk melihat peraturan grup",
         )
     elif rules:
         update.effective_message.reply_text(
@@ -68,8 +68,8 @@ def send_rules(update, chat_id, from_pm=False):
         )
     else:
         update.effective_message.reply_text(
-            "The group admins haven't set any rules for this chat yet. "
-            "This probably doesn't mean it's lawless though...!"
+            "Silahkan ketik /peraturan "
+            "Untuk melihat peraturan grup!"
         )
 
 
@@ -125,7 +125,7 @@ __help__ = """
  ❍ /clearrules*:* clear the rules for this chat.
 """
 
-__mod_name__ = "RULES"
+__mod_name__ = "Rules"
 
 GET_RULES_HANDLER = CommandHandler("rules", get_rules, filters=Filters.group)
 SET_RULES_HANDLER = CommandHandler("setrules", set_rules, filters=Filters.group)
