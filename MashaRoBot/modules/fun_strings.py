@@ -16,7 +16,7 @@ RUN_STRINGS = (
     "Ini hanya aksara. Mati tapi bernyawa.\nIni hanya aksara. Dingin, tapi bisa menyelimuti dengan kehangatan tiada tanding.\nIni hanya aksara. Tumpul, tapi bisa menyakiti lebih dari goresan pedang tajam di tubuhmu.\nIni hanya aksara. Berkawanlah, maka semua baik-baik saja.\n\n#aksara\n@RuangKerabat",
     "Kita diberi gerak tapi tak diberi ruang.\nKita punya rasa tapi tak punya masa.\nKita dekat tapi tersekat.\nKita hanya kita, dengan segala paradoks kita.\n\n#aksara\n@RuangKerabat",
     "Tahukah pelangi yang biasa kuceritakan padamu? Ia malu menampakkan diri lagi setelah kuceritakan tentang keindahanmu.\n\n#aksara\n@RuangKerabat",
-    "Di antara kilau bintang malam hari, bayangmu hadir menjadi paling bersinar. Datang menagih rindu yang belum tuntas. Aku tersenyum, barangkali kau ada dibelakangku bersiap memelukku.\n\n#aksara\@RuangKerabat",
+    "Di antara kilau bintang malam hari, bayangmu hadir menjadi paling bersinar. Datang menagih rindu yang belum tuntas. Aku tersenyum, barangkali kau ada dibelakangku bersiap memelukku.\n\n#aksara\n@RuangKerabat",
 )
 
 GIFS = [
