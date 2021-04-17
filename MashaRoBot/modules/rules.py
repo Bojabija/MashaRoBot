@@ -55,12 +55,12 @@ def send_rules(update, chat_id, from_pm=False):
         )
     elif rules:
         update.effective_message.reply_text(
-            "Please click the button below to see the rules.",
+            "Peraturan Kerabat Online Group.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Rules", url=f"t.me/{bot.username}?start={chat_id}"
+                            text="Lihat Di Sini", url=f"t.me/KerabatOnline_Ch/153/"
                         )
                     ]
                 ]
