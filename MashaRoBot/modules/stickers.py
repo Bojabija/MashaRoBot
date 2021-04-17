@@ -24,16 +24,16 @@ def stickerid(update: Update, context: CallbackContext):
         update.effective_message.reply_text(
             "Hello "
             + f"{mention_html(msg.from_user.id, msg.from_user.first_name)}"
-            + ", The sticker id you are replying is :\n <code>"
+            + ", Id stikernya adalah:\n <code>"
             + escape(msg.reply_to_message.sticker.file_id)
             + "</code>",
             parse_mode=ParseMode.HTML,
         )
     else:
         update.effective_message.reply_text(
-            "Hello "
+            "Hai "
             + f"{mention_html(msg.from_user.id, msg.from_user.first_name)}"
-            + ", Please reply to sticker message to get id sticker",
+            + ", balas pesan yang ingin anda lihat id-nya",
             parse_mode=ParseMode.HTML,
         )
 
@@ -130,7 +130,7 @@ def kang(update: Update, context: CallbackContext):
         elif msg.reply_to_message.sticker and msg.reply_to_message.sticker.emoji:
             sticker_emoji = msg.reply_to_message.sticker.emoji
         else:
-            sticker_emoji = "🤔"
+            sticker_emoji = "😎"
 
         if not is_animated:
             try:
@@ -388,7 +388,7 @@ def makepack_internal(
     png_sticker=None,
     tgs_sticker=None,
 ):
-    name = user.first_name
+    name = user.username
     name = name[:50]
     try:
         extra_version = ""
@@ -398,7 +398,7 @@ def makepack_internal(
             success = context.bot.create_new_sticker_set(
                 user.id,
                 packname,
-                f"{name}s kang pack" + extra_version,
+                f"koleksi @{name}" + extra_version,
                 png_sticker=png_sticker,
                 emojis=emoji,
             )
@@ -406,7 +406,7 @@ def makepack_internal(
             success = context.bot.create_new_sticker_set(
                 user.id,
                 packname,
-                f"{name}s animated kang pack" + extra_version,
+                f"pack @{name}" + extra_version,
                 tgs_sticker=tgs_sticker,
                 emojis=emoji,
             )
