@@ -60,7 +60,7 @@ def send_rules(update, chat_id, from_pm=False):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Lihat Di Sini", url=f"t.me/KerabatOnline_Ch/153/"
+                            text="Lihat Di Sini", url=f"t.me/RuangKerabat/153/"
                         )
                     ]
                 ]
