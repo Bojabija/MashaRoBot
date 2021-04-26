@@ -35,7 +35,7 @@ async def _(event):
     if event.fwd_from:
         return
     
-    webevent = await event.reply("searching........")
+    webevent = await event.reply("mencari........")
     match = event.pattern_match.group(1)
     page = re.findall(r"page=\d+", match)
     try:
@@ -57,7 +57,7 @@ async def _(event):
         except IndexError:
             break
     await webevent.edit(
-        "**Search Query:**\n`" + match + "`\n\n**Results:**\n" + msg, link_preview=False
+        "**Pencarian:**\n`" + match + "`\n\n**Hasil:**\n" + msg, link_preview=False
     )
 
 @register(pattern="^/img (.*)")
