@@ -118,7 +118,7 @@ def mesum(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message
 
-    reply_to = message.reply_to_message if message.reply_to_message else message
+    reply_to = message.reply_text if message.reply_text else message
 
     curr_user = "{}".format(mention_html(message.from_user.id, message.from_user.first_name))
     user_id = extract_user(message, args)
@@ -155,7 +155,7 @@ def mesum(update: Update, context: CallbackContext):
 
 @run_async
 def roll(update: Update, context: CallbackContext):
-    update.message.reply_text(random.choice(range(1, 7)))
+    update.message.reply_text(random.choice(range(1, 6)))
 
 
 @run_async
