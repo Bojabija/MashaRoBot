@@ -26,8 +26,8 @@ GIFS = [
 ]
 
 SLAP_MASHA_TEMPLATES = (
-    "Hei {user1}, gausah slap slap gue! Lu mau gue mute?.",
-    "Stop slap gue {user1}!",
+    "Hei, gausah slap slap gue! Lu mau gue mute?.",
+    "Stop slap gue!",
     [
         "Lu gue mute dulu yah, mampus!",  # normal reply
         "Beruntung lu admin disini, jadi gue gabisa mute lu.",  # reply to admin
@@ -55,10 +55,10 @@ SLAP_TEMPLATES = (
     "{user1} menyebarkan aib {user2} ke sosial media.",
     "{user2} diikat di kursi kemudian dipukul sebuah {item} oleh {user1}.",
     "{user2} sekarat karena telah dikeroyok oleh warga.",  # No game no life reference
-    "Ingat {user2}, kau itu beban keluarga!",  # No game no life reference
+    "{user1} berdiri di belakang {user2} kemudian {hits} kepalanya menggunakan {item}.",  # No game no life reference
     "{user1} menggeplak {user2} dengan keras!",  # No game no life reference
-    "Semua netizen membully {user2}",  # Pixels pet cat - @NeoTheKitty
-    "{user2} jadi buronan Polisi karena ketahuan mencuri kancut Firaun.",  # Dbz
+    "{user2} pusing setelah kepalanya di getok menggunakan {item}",  # Pixels pet cat - @NeoTheKitty
+    "{user2} jadi buronan Polisi karena difitnah {user1} mencuri baju partai golkar..",  # Dbz
     "{user1} menghajar {user2} dengan jurus karate.",  # Goblin Slayer
 )
 
@@ -134,7 +134,7 @@ ITEMS = (
     "kunci inggris",
     "raket nyamuk",
     "pentungan hansip",
-    "kancut firaun",
+    "termos",
     "stang motor Supra",
     "velg motor NMAX",
     "piring keramik",
