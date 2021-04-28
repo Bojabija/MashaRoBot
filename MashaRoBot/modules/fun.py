@@ -118,7 +118,7 @@ def mesum(update: Update, context: CallbackContext):
     args = context.args
     message = update.effective_message
 
-    reply_to = message.reply_text if message.reply_text else message
+    reply_to = message.reply_to_message.reply_text if message.reply_to_message else message
 
     curr_user = "{}".format(mention_html(message.from_user.id, message.from_user.first_name))
     user_id = extract_user(message, args)
